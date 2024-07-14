@@ -5,18 +5,24 @@ import ProfileScreen from "./Screens/ProfileScreen";
 import LoginScreen from "./Screens/LoginScreen";
 import RegisterScreen from "./Screens/RegisterScreen";
 import Nav from "./components/Nav";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import PrivateRoute from "./components/Privateroute";
 
 const App = () => {
   return (
-    <div>
+    <>
+      <ToastContainer />
       <Nav />
       <Routes>
         <Route path="/" element={<HomeScreen />} />
-        <Route path="/Profile" element={<ProfileScreen />} />
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/register" element={<RegisterScreen />} />
+        <Route path="" element={<PrivateRoute />}>
+          <Route path="/Profile" element={<ProfileScreen />} />
+        </Route>
       </Routes>
-    </div>
+    </>
   );
 };
 

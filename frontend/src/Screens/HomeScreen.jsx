@@ -5,7 +5,7 @@ const HomeScreen = () => {
   return (
     <div>
       <div className="w-[80%] h-[20%] bg-slate-100 mx-auto mt-4 border-1 border-black/10 drop-shadow-sm flex flex-col items-center justify-center md:w-[50%]">
-        <h1>Mern Auth</h1>
+        <h1 className="text-xl font-semibold">Mern Auth</h1>
         <p className="text-sm text-center md:text-base lg:text-lg">
           This is a boilerplate for MERN authentication that stores a JWT in an
           HTTP-Only cookie. It also uses Redux Toolkit and the Tailwind CSS.
